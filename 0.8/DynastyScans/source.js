@@ -15335,10 +15335,10 @@ var _Sources = (() => {
   // src/DynastyScans/DynastyScans.ts
   var DS_DOMAIN = "https://dynasty-scans.com";
   var DynastyScansInfo = {
-    version: "2.0.1",
-    name: "Dynasty Scans",
+    version: "2.0.2",
+    name: "Dynasty Scans Dev",
     icon: "icon.png",
-    author: "Netsky",
+    author: "Netsky, Nelo",
     authorWebsite: "https://github.com/TheNetsky",
     description: "Extension that pulls manga from dynasty-scans.com.",
     contentRating: import_types2.ContentRating.ADULT,
@@ -15695,7 +15695,7 @@ var _Sources = (() => {
       }
       const page = metadata?.page ?? 1;
       const request = App.createRequest({
-        url: `${DS_DOMAIN}/search?page=${page}&q=${encodeURI(query?.title ?? "")}&classes%5B%5D=Doujin&classes%5B%5D=Series${tagString}&sort=`,
+        url: `${DS_DOMAIN}/search?page=${page}&q=${encodeURI(query?.title ?? "")}${tagString}&sort=`,
         method: "GET"
       });
       const response = await this.requestManager.schedule(request, 1);
